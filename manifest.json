@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Ask Me Anything",
+  "version": "1.0.1",
+  "description": "ChatGPT Integration",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "256": "ask.256x255.png"
+    }
+  },
+  "icons": {
+    "256": "ask.256x255.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup.js"]
+    }
+  ],
+  "permissions": ["storage"]
+}
